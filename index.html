@@ -24,10 +24,10 @@
 .work{background:var(--paper)}
 .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px}
 .project{display:block;overflow:hidden;background:#fff;position:relative;transition:transform .3s,box-shadow .3s;border:1px solid #e6dad5;box-shadow:0 10px 24px rgba(37,22,25,.05)}
-.project:hover{transform:translateY(-5px);box-shadow:0 20px 45px rgba(37,22,25,.14)}
-.project-shot{position:relative;overflow:hidden;background:#ece3de;border-bottom:1px solid #eaded9}
-.project-shot::after{content:'';position:absolute;inset:auto 0 0 0;height:32%;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(20,11,14,.10) 70%,rgba(20,11,14,.20) 100%);pointer-events:none}
-.project-shot img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center top;display:block}
+.project:hover{transform:translateY(-5px);box-shadow:0 20px 45px rgba(37,22,25,.12)}
+.project-shot{position:relative;overflow:hidden;background:#f7f1ed;padding:10px 10px 0;border-bottom:1px solid #eaded9}
+.project-shot::after{content:none}
+.project-shot img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;object-position:center center;background:#fff;border-radius:8px}
 .project-meta{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;background:#fff;padding:18px 20px 20px;min-height:128px}
 .project-copy{display:flex;flex-direction:column;gap:8px;max-width:calc(100% - 150px)}
 .project-category{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--wine)}
@@ -57,6 +57,22 @@
 @media(max-width:680px){.container{width:calc(100% - 38px)}.section{padding:75px 0}.nav{height:72px}.brand{font-size:24px}.menu-btn{display:block}.nav-links{display:none;position:absolute;z-index:11;left:0;right:0;top:72px;padding:23px 21px;background:#24191d;flex-direction:column;align-items:stretch;gap:18px}.nav-links.open{display:flex}.nav-links a{font-size:15px}.nav-links .nav-pill{border-radius:4px;text-align:center}.hero{min-height:630px}.hero-photo{width:100%;opacity:.65;background-position:65% center}.hero:before{background:linear-gradient(90deg,#1b1416ef 0%,#1b1416cb 60%,#1b141684)}.hero-main{padding:97px 0 93px}.hero h1{font-size:clamp(43px,10vw,65px)}.hero-desc{font-size:15px}.actions{gap:11px}.actions .btn{padding:14px 17px;font-size:12px}.trust-grid{grid-template-columns:repeat(3,1fr);gap:0;padding:14px 0}.trust-item{min-height:112px;border-right:1px solid #d5c7c3;border-bottom:1px solid #d5c7c3}.trust-item:nth-child(3n){border-right:0}.trust-item:nth-last-child(-n+3){border-bottom:0}.trust-item svg{width:25px;height:25px}.trust-item span{font-size:10px}.section-intro{margin-bottom:34px}.section-intro h2{font-size:37px}.work-grid{grid-template-columns:1fr;gap:19px}.project>img{aspect-ratio:3.1/1}.project-meta{min-height:87px;padding:14px 17px}.project-meta strong{font-size:19px}.project-meta small{font-size:11px}.about-grid{grid-template-columns:1fr;gap:34px}.portrait-frame{max-width:470px;max-height:480px;margin:auto;border-radius:8px 150px 150px 8px}.about h2{font-size:39px}.about p{font-size:14px}.strategy-grid{grid-template-columns:repeat(2,1fr);row-gap:36px}.strategy-item:nth-child(even){border-right:0}.strategy-item h3{font-size:20px}.strategy-item p{font-size:12px}.offer-grid{grid-template-columns:1fr;gap:26px}.offer h2{font-size:43px}.offer-panel{padding:24px 18px}.old-price,.new-price{font-size:37px}.testimonial-stack{gap:22px}.closing{padding:78px 0 58px}.closing h2{font-size:37px}.footer-inner{flex-direction:column;align-items:flex-start}.float-whatsapp{right:13px;bottom:12px;padding:13px;border-radius:50%}.float-whatsapp span{display:none}}
 @media(max-width:380px){.hero h1{font-size:40px}.actions .btn{width:100%}.price-row{gap:8px}.old-price,.new-price{font-size:31px}.price-row>div:first-child{padding-right:8px}.strategy-item{padding:0 9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+@media(max-width:940px){
+  .project-meta strong{font-size:23px}
+  .project-copy{max-width:calc(100% - 138px)}
+}
+@media(max-width:760px){
+  .work-grid{grid-template-columns:1fr;gap:22px}
+  .project{box-shadow:0 8px 20px rgba(37,22,25,.06)}
+  .project-shot{padding:8px 8px 0}
+  .project-shot img{width:100%;height:auto;object-fit:contain;object-position:center center}
+  .project-meta{padding:16px 16px 18px;min-height:auto;flex-direction:column;align-items:flex-start}
+  .project-copy{max-width:100%}
+  .project-meta strong{font-size:24px}
+  .project-meta small{font-size:13px}
+  .project-btn{margin-top:2px}
+}
 </style>
 </head>
 <body>
